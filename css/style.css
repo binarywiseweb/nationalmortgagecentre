@@ -202,6 +202,45 @@ h6,
         object-fit: cover;
     }
 }
+@media (max-width: 768px) {
+    /* Let carousel item height adjust automatically */
+    #header-carousel .carousel-item {
+        position: relative;
+        min-height: auto;
+    }
+
+    /* Show full image without cropping */
+    #header-carousel .carousel-item img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Adjust caption placement for mobile */
+    #header-carousel .carousel-caption {
+        position: relative;
+        bottom: auto;
+        text-align: center;
+        padding-top: 10px; /* optional spacing */
+    }
+
+    /* Reduce heading and paragraph size */
+    #header-carousel .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    #header-carousel .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    /* Smaller button for mobile */
+    #header-carousel .carousel-caption .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
 
 .page-header {
     padding-top: 12rem;
