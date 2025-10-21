@@ -828,6 +828,21 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+    // Select all nav links inside the collapsed navbar
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.getElementById('navbarCollapse');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Only collapse if the menu is shown (mobile)
+            if (navbarCollapse.classList.contains('show')) {
+                new bootstrap.Collapse(navbarCollapse).toggle();
+            }
+        });
+    });
+</script>
+
 </body>
 
 </html>
